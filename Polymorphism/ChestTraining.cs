@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Polymorphism
+﻿namespace Polymorphism
 {
-    class ChestTraining : Exercise
+    internal class ChestTraining : Exercise
     {
         public ChestTraining(int series, int repetitions, int load) 
             : base(series, repetitions, load)
@@ -15,7 +9,7 @@ namespace Polymorphism
 
         public override int TotalLoad()
         {
-            return (_series*_repetitions*_load);
+            return (Series*Repetitions*Load);
         }
     }
 }
