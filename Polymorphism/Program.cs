@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Polymorphism
 {
@@ -6,9 +7,17 @@ namespace Polymorphism
     {
         private static void Main()
         {
-            var chestTraining = new ChestTraining(4, 10, 60);
-            var totalLoad = chestTraining.TotalLoad();
-            Console.WriteLine("Total load in chest exercise was: {0} kg.", totalLoad);
+            var exercises = new List<Exercise>
+            {
+                new ChestTraining(4, 8, 60),
+                new ArmsTraining(4, 12, 12)
+            };
+
+            foreach (var exercise in exercises)
+            {
+                exercise.TotalLoad();
+            }
+
             Console.ReadKey();
         }
     }

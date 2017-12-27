@@ -1,4 +1,6 @@
-﻿namespace Polymorphism
+﻿using System;
+
+namespace Polymorphism
 {
     internal class ChestTraining : Exercise
     {
@@ -7,9 +9,11 @@
         {
         }
 
-        public override int TotalLoad()
+        public override void TotalLoad()
         {
-            return (Series*Repetitions*Load);
+            base.TotalLoad();
+            var total = Series * Repetitions * Load;
+            Console.WriteLine("Total load in chest exercise was: {0} kg.", total);
         }
     }
 }

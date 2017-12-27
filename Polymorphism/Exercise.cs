@@ -1,4 +1,6 @@
-﻿namespace Polymorphism
+﻿using System;
+
+namespace Polymorphism
 {
     internal abstract class Exercise
     {
@@ -13,6 +15,9 @@
             Load = load;
         }
 
-        public abstract int TotalLoad();
+        public virtual void TotalLoad()
+        {
+            Console.WriteLine("Counting total load in exercise...");
+        }
     }
 }
